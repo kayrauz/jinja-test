@@ -46,8 +46,10 @@ def write_file(output,content):
         return f.write(content)
 
 
+
+
 if __name__ == "__main__":
-    result = render('index.html',"output.html", {"name":"Kayra"})
+    result = render('index.html',"output.html", {"name":"<b>Kayra</b>"})
     write_file(result)
 
 
