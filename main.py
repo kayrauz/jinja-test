@@ -38,7 +38,6 @@ def get_avalible_filename(filename):
 def render(template_name,context):
     template = get_template(template_name)
     result = template.render(**context)
-    output = get_avalible_filename(output)
     return result
 
 def write_file(output,content):
@@ -50,7 +49,8 @@ def write_file(output,content):
 
 if __name__ == "__main__":
     result = render('index.html',"output.html", {"name":"<b>Kayra</b>"})
-    write_file(result)
+    output = get_avalible_filename("output.html")
+    write_file(output, result)
 
 
 
