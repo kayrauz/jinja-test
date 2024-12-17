@@ -125,7 +125,7 @@ def convertToPdf(filename):
 if __name__ == "__main__":
 
     result = render('report.html', {
-    "name": "Kayra",
+    "name": "Kayra UZ",
     "exam": "testExam", 
     "securecode": "HGJH234", 
     "date": "23 asd 3034", 
