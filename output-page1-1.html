@@ -231,6 +231,29 @@
         background: #ffcb04 !important;
         color: black !important;
     }
+    .image {
+        position: absolute;
+    }
+    body {
+      margin: 0; /* Remove default body margin */
+      padding: 0; /* Remove default body padding */
+      background-image: url('1.png'); /* Background image */
+      background-size: contain; /* Ensure the full image fits within the body */
+      background-repeat: no-repeat; /* Prevent tiling */
+      width: 1192px; /* Body width matches the viewport width */
+      height: 1686px; /* Body height matches the viewport height */
+    }
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -7px;
+        left: -7px;
+    }
+    body {
+  overflow: hidden; /* Prevent overflow */
+}
+
 </style>
 
 
@@ -249,7 +272,6 @@
 
 <body>
     <div class="wrapper">
-        <img src="1.png" />
         <div class="aday info">KAYRA UZ</div>
         <div class="securecode info">HGJH234</div>
         <div class="testcenter info">random test</div>

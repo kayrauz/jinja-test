@@ -1,7 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML, CSS
 from os import path
-from weasyprint.text.fonts import FontConfiguration
+import subprocess, itertools
 
 """
 Variables
@@ -104,7 +104,7 @@ def render(template_name, context):
             "estimate": context["estimate"],
             "descriptors": context["descriptors"]
         })
-        return result
+        return result, context["name"].upper()
     else:
         result = template.render({
             "name": context["name"].upper(),
@@ -120,7 +120,7 @@ def render(template_name, context):
             "expression_level": context["expression_level"],
             "conversation_level": context["conversation_level"]
         })
-        return result
+        return result, context["name"].upper()
 
 
 def write_file(output, content):
@@ -131,7 +131,8 @@ def convertToPdf(filename):
     return HTML(filename=filename).write_pdf(get_avalible_filename("pdfRapor.pdf"))
 
 def page1():
-    result = render('page1.html', {
+    filename = 'page1.html'
+    result, _ = render(filename, {
     "name": "Kayra UZ", # TRUE
     "exam": "testExam", # TRUE
     "securecode": "HGJH234", # TRUE
@@ -148,10 +149,12 @@ def page1():
     "descriptors": "dasdasdasdasd" # TRUE
     })
     output = get_avalible_filename("output-page1-1.html")
-    return write_file(output, result)
+    write_file(output, result)
+    return output
 
 def page2():
-    result = render('page2.html', {
+    filename = 'page2.html'
+    result, name = render(filename, {
     "name": "Kayra UZ", # TRUE
     "exam": "testExam", # TRUE
     "securecode": "HGJH234", # TRUE
@@ -165,10 +168,12 @@ def page2():
     "points_to_work_on": "asdasd"
     })
     output = get_avalible_filename("output-page2-1.html")
-    return write_file(output, result)
+    write_file(output, result)
+    return output, name
 
 if __name__ == "__main__":
-    page1()
-    page2()
-    
-    #convertToPdf(output)
+    args = list(itertools.chain(*[page2()]))
+    args.insert(0, page1())
+    result = subprocess.run(['node', 'index.js'] + [str(arg) for arg in args], capture_output=True, text=True)
+    print('STDOUT:', result.stdout)
+    print('STDERR:', result.stderr)
