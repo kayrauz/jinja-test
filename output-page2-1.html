@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    .image-wrapper {
+        position: relative;
+        display: inline-block;
+        font-family: "Lato", sans-serif;
+    }
+
+    .image-wrapper img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .aday {
+        top: 310px;
+        left: 220px;
+    }
+
+    .securecode {
+        top: 344px;
+        left: 290px;
+    }
+
+    .info {
+        position: absolute;
+        font-size: 21px;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        text-align: center;
+    }
+
+    .testcenter {
+        top: 382px;
+        left: 280px;
+    }
+    .exam {
+        top: 311px;
+        left: 590px;
+    }
+    .administration {
+        top: 347px;
+        left: 605px;
+    }
+    .school {
+        top: 383px;
+        left: 750px;
+    }
+    .date {
+        top: 345px;
+        left: 945px;
+    }
+
+    .progress {
+        position: absolute;
+        font-size: 16px;
+        font-family: "Lato", sans-serif;
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        text-align: center;
+        width: 106px;
+        height: 26px;
+        transform: skew(-19deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: white;
+    }
+
+    .progress span {
+        transform: skew(19deg);
+        display: inline-block;
+    }
+
+    .a1 {
+        left: 65px;
+    }
+
+    .a2_1 {
+        left: 173px;
+    }
+
+    .a2_2 {
+        left: 281px;
+    }
+
+    .b1_1 {
+        left: 389px;
+    }
+
+    .b1_2 {
+        left: 497px;
+    }
+
+    .b2_1 {
+        left: 605px;
+    }
+
+    .b2_2 {
+        left: 714px;
+    }
+
+    .c1_1 {
+        left: 822px;
+    }
+
+    .c1_2 {
+        left: 930px;
+    }
+
+    .c2 {
+        left: 1038px;
+    }
+
+    .grammer_bar {
+        position: absolute;
+        top: 737px;
+        left: 0;
+    }
+    .conversation_bar {
+        position: absolute;
+        top: 947px;
+        left: 0;
+    }
+    .expression_bar {
+        position: absolute;
+        top: 1061px;
+        left: 0;
+    }
+
+    .active {
+        background: #ffcb04 !important;
+        color: black !important;
+    }
+
+    .points_area {
+        position: absolute;
+        top: 585px;
+        font-family: "Lato", sans-serif;
+        left: 100px;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+        width: 1000px;
+        height: 85px;
+    }
+</style>
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ids = ['grammer_a1', 'grammer_a2_1', 'expression_a1', 'expression_a2_1', 'conversation_a1', 'conversation_a2_1', '']
+        ids.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.add('active');
+            }
+        });
+    })
+
+</script>
+
+
+<body>
+    <div class="wrapper">
+        <img src="2.png" />
+        <div class="aday info">KAYRA UZ</div>
+        <div class="securecode info">HGJH234</div>
+        <div class="testcenter info">random test</div>
+        <div class="exam info">testExam</div>
+        <div class="administration info">asdasdasd</div>
+        <div class="date info">23 asd 3034</div>
+        <div class="school info">radno</div>
+        <div class="points_area">
+asdasd
+        </div>
+        <div class="grammer_bar" id="grammer_bar">
+            <div class="progress a1 " id="grammer_a1"><span>A1</span></div>
+            <div class="progress a2_1 " id="grammer_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2 " id="grammer_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1 " id="grammer_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2 " id="grammer_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1 " id="grammer_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2 " id="grammer_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1 " id="grammer_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2 " id="grammer_c1_2"><span>C1.2</span></div>
+            <div class="progress c2 " id="grammer_c2"><span>C2</span></div>
+        </div>
+        <div class="conversation_bar" id="conversation_bar">
+            <div class="progress a1 " id="conversation_a1"><span>A1</span></div>
+            <div class="progress a2_1 " id="conversation_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2 " id="conversation_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1 " id="conversation_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2 " id="conversation_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1 " id="conversation_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2 " id="conversation_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1 " id="conversation_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2 " id="conversation_c1_2"><span>C1.2</span></div>
+            <div class="progress c2 " id="conversation_c2"><span>C2</span></div>
+        </div>
+        <div class="expression_bar" id="expression_bar">
+            <div class="progress a1 " id="expression_a1"><span>A1</span></div>
+            <div class="progress a2_1 "  id="expression_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2 "  id="expression_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1 "  id="expression_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2 "  id="expression_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1 "  id="expression_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2 "  id="expression_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1 "  id="expression_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2 "  id="expression_c1_2"><span>C1.2</span></div>
+            <div class="progress c2 "  id="expression_c2"><span>C2</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

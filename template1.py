@@ -83,9 +83,10 @@ def render(template_name, context):
         "level": context["level"],
         "listening_level": context["listening_level"],
         "reading_level": context["reading_level"],
-        "reading_level": context["reading_level"],
+        "speaking_level": context["speaking_level"],
         "writing_level": context["writing_level"],
-        "examtype": context["examtype"]
+        "examtype": context["examtype"],
+        "test_center": context["test_center"]
     })
     return result
 
@@ -126,7 +127,7 @@ if __name__ == "__main__":
 
     result = render('report.html', {
     "name": "Kayra UZ",
-    "exam": "testExam", 
+    "exam": "testExam",
     "securecode": "HGJH234", 
     "date": "23 asd 3034", 
     "school": "radno", 
@@ -136,8 +137,9 @@ if __name__ == "__main__":
     "reading_level": "A1.3",
     "speaking_level": "A1.1",
     "writing_level": "A1.2",
-    "examtype": "random"
+    "examtype": "random",
+    "test_center": "test merk"
     })
     output = get_avalible_filename("output.html")
     write_file(output, result)
-    convertToPdf(output)
+    #convertToPdf(output)
