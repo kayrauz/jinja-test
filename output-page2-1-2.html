@@ -188,7 +188,7 @@
 
 <script defer>
     document.addEventListener('DOMContentLoaded', () => {
-        const ids = {{ script| safe }}
+        const ids = ['grammer_a1', 'grammer_a2_1', 'expression_a1', 'expression_a2_1', 'conversation_a1', 'conversation_a2_1', '']
         ids.forEach(id => {
             const element = document.getElementById(id);
             if (element) {
@@ -203,18 +203,18 @@
 <body>
     <div class="wrapper">
         <img src="2.png" />
-        <div class="aday info">{{ name }}</div>
-        <div class="securecode info">{{ securecode }}</div>
-        <div class="testcenter info">{{ test_center }}</div>
-        <div class="exam info">{{ exam }}</div>
-        <div class="administration info">{{ administration }}</div>
-        <div class="date info">{{ date }}</div>
-        <div class="school info">{{ school }}</div>
-        <div class="grammer level">{{ grammer_level }}</div>
-        <div class="conversation level">{{ conversation_level }}</div>
-        <div class="expression level">{{ expression_level }}</div>
+        <div class="aday info">KAYRA UZ</div>
+        <div class="securecode info">HGJH234</div>
+        <div class="testcenter info">random test</div>
+        <div class="exam info">testExam</div>
+        <div class="administration info">asdasdasd</div>
+        <div class="date info">23 asd 3034</div>
+        <div class="school info">radno</div>
+        <div class="grammer level">A2.1</div>
+        <div class="conversation level">A2.1</div>
+        <div class="expression level">A2.1</div>
         <div class="points_area">
-{{ points_to_work_on }}
+asdasd
         </div>
         <div class="grammer_bar" id="grammer_bar">
             <div class="progress a1 " id="grammer_a1"><span>A1</span></div>
