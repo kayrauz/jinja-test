@@ -174,6 +174,6 @@ def page2():
 if __name__ == "__main__":
     args = list(itertools.chain(*[page2()]))
     args.insert(0, page1())
-    result = subprocess.run(['node', 'index.js'] + [str(arg) for arg in args], capture_output=True, text=True)
+    result = subprocess.run(['node', 'template2Parser.js'] + [str(arg) for arg in args], capture_output=True, text=True)
     print('STDOUT:', result.stdout)
     print('STDERR:', result.stderr)

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    .image-wrapper {
+        position: relative;
+        /* Enables positioning of child elements */
+        display: inline-block;
+        /* Ensure wrapper fits the size of the image */
+        font-family: "Lato", sans-serif;
+    }
+
+    .image-wrapper img {
+        display: block;
+        /* Removes extra spacing below the image */
+        width: 100%;
+        /* Optional: Makes image responsive */
+        height: auto;
+        /* Maintains aspect ratio */
+    }
+
+    .font {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        font-family: "Lato", sans-serif;
+        -webkit-text-stroke: 0.015em transparent;
+        text-shadow: none;
+    }
+
+    .image {
+        position: absolute;
+    }
+
+    body {
+        margin: 0;
+        /* Remove default body margin */
+        padding: 0;
+        /* Remove default body padding */
+        background-image: url('2.png');
+        /* Background image */
+        background-size: contain;
+        /* Ensure the full image fits within the body */
+        background-repeat: no-repeat;
+        /* Prevent tiling */
+        width: 1192px;
+        /* Body width matches the viewport width */
+        height: 1686px;
+        /* Body height matches the viewport height */
+        position: relative;
+    }
+
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -10px;
+        left: -7px;
+    }
+
+    .abs {
+        position: absolute;
+    }
+
+    .exam {
+        top: 280px;
+        text-align: center;
+        font-weight: 900;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 28px;
+    }
+    .examtype {
+    top: 330px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-weight: 400;
+    font-size: 22px;
+}
+.name {
+    top: 400px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-weight: 700;
+    color: rgb(81,23,81);
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.congrats {
+    top: 590px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-weight: 700;
+    font-size: 35px;
+}
+.securecode {
+    top: 466px;
+    left: 362px;
+    text-align: center;
+    justify-content: left;
+    width: 230px;
+    display: flex;
+    font-weight: 400;
+    font-size: 22px;
+}
+.date {
+    top: 493px;
+    left: 277px;
+    text-align: center;
+    justify-content: left;
+    width: 270px;
+    display: flex;
+    font-weight: 400;
+    font-size: 22px;
+}
+.testcenter {
+    top: 493px;
+    left: 725px;
+    text-align: center;
+    justify-content: left;
+    width: 270px;
+    display: flex;
+    font-weight: 400;
+    font-size: 22px;
+}
+.administration {
+    top: 520px;
+    left: 705px;
+    text-align: center;
+    justify-content: left;
+    width: 270px;
+    display: flex;
+    font-weight: 400;
+    font-size: 22px;
+}
+.school {
+    top: 466px;
+    left: 655px;
+    text-align: center;
+    justify-content: left;
+    width: 330px;
+    display: flex;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.purple {
+    color: rgb(81,23,81);
+}
+
+.level {
+    top: 650px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    font-weight: 700;
+    font-size: 32px;
+}
+.mean-text {
+    top: 720px;
+    text-align: center;
+    justify-content: left;
+    width: 550px;
+    left: 135px;
+    display: flex;
+    font-weight: 700;
+    font-size: 32px;
+}
+.means {
+    top: 825px;
+    text-align: left;
+    justify-content: left;
+    width: 1020px;
+    height: 110px;
+    left: 100px;
+    display: flex;
+    white-space: pre-wrap;
+    font-weight: 700;
+    font-size: 20px;
+}
+.improve {
+    top: 1100px;
+    text-align: left;
+    justify-content: left;
+    width: 1020px;
+    height: 110px;
+    left: 100px;
+    display: flex;
+    white-space: pre-wrap;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="exam abs font">VTest English for Schools</div>
+        <div class="examtype abs font">AGES 7–10 | 4 SKILLS</div>
+        <div class="name abs font">ARAS KEREM BULUT</div>
+        <div class="securecode abs font">74E98R783</div>
+        <div class="date abs font">04 May 2024</div>
+        <div class="school abs font"> PINAR KOLEJİ</div>
+        <div class="testcenter abs font">PINAR KOLEJİ</div>
+        <div class="administration abs font">Online standard</div>
+        <div class="congrats abs font">Tebrikler, ARAS KEREM BULUT!</div>
+        <div class="level abs font">Okuma Seviyeniz: <span class="purple"> Pre-A1</span></div>
+        <div class="mean-text abs purple font">Pre-A1 ne demek?</div>
+        <div class="means abs font">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus non feugiat rhoncus.
+• Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus non feugiat rhoncus.
+• Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus non feugiat rhoncus.
+</div>
+        <div class="improve abs font">• Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus non feugiat rhoncus.
+• Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus non feugiat rhoncus.
+• Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper lacus non feugiat rhoncus.
+</div>
+    </div>
+</body>
+
+</html>
