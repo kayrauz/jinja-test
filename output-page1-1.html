@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+    .image-wrapper {
+        position: relative;
+        /* Enables positioning of child elements */
+        display: inline-block;
+        /* Ensure wrapper fits the size of the image */
+        font-family: "Lato", sans-serif;
+    }
+
+    .image-wrapper img {
+        display: block;
+        /* Removes extra spacing below the image */
+        width: 100%;
+        /* Optional: Makes image responsive */
+        height: auto;
+        /* Maintains aspect ratio */
+    }
+
+    .aday {
+        top: 305px;
+        left: 220px;
+    }
+
+    .securecode {
+        top: 340px;
+        left: 290px;
+    }
+
+    .info {
+        position: absolute;
+        font-size: 21px;
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        text-align: center;
+    }
+
+    .testcenter {
+        top: 380px;
+        left: 280px;
+    }
+
+    .exam {
+        top: 305px;
+        left: 590px;
+    }
+
+    .administration {
+        top: 343px;
+        left: 605px;
+    }
+
+    .school {
+        top: 377px;
+        left: 750px;
+    }
+
+    .date {
+        top: 343px;
+        left: 945px;
+    }
+
+    .level {
+        position: absolute;
+        font-size: 25px;
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        text-align: center;
+    }
+
+    .text {
+        position: absolute;
+        font-size: 14px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        text-align: center;
+    }
+
+    .listening {
+        top: 808px;
+        left: 390px;
+    }
+
+    .reading {
+        top: 922px;
+        left: 380px;
+    }
+
+    .speaking {
+        top: 1037px;
+        left: 410px;
+    }
+
+    .writing {
+        top: 1150px;
+        left: 370px;
+    }
+
+    .general {
+        top: 480px;
+        left: 420px;
+    }
+
+    .estimate {
+        top: 600px;
+        left: 100px;
+        height: 33px;
+        width: 1000px;
+    }
+
+    .descriptors {
+        top: 660px;
+        left: 100px;
+        height: 140px;
+        width: 1000px;
+    }
+
+    .progress {
+        position: absolute;
+        font-size: 16px;
+        font-family: "Lato", sans-serif;
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        text-align: center;
+        width: 106px;
+        height: 26px;
+        transform: skew(-19deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+        color: white;
+    }
+
+    .progress span {
+        transform: skew(19deg);
+        display: inline-block;
+    }
+
+    .a1 {
+        left: 65px;
+    }
+
+    .a2_1 {
+        left: 173px;
+    }
+
+    .a2_2 {
+        left: 281px;
+    }
+
+    .b1_1 {
+        left: 389px;
+    }
+
+    .b1_2 {
+        left: 497px;
+    }
+
+    .b2_1 {
+        left: 605px;
+    }
+
+    .b2_2 {
+        left: 714px;
+    }
+
+    .c1_1 {
+        left: 822px;
+    }
+
+    .c1_2 {
+        left: 930px;
+    }
+
+    .c2 {
+        left: 1038px;
+    }
+
+    .overall_bar {
+        position: absolute;
+        top: 533px;
+        left: 0;
+    }
+
+    .listening_bar {
+        position: absolute;
+        top: 863px;
+        left: 0;
+    }
+
+    .reading_bar {
+        position: absolute;
+        top: 977px;
+        left: 0;
+    }
+
+    .speaking_bar {
+        position: absolute;
+        top: 1091px;
+        left: 0;
+    }
+
+    .writing_bar {
+        position: absolute;
+        top: 1205px;
+        left: 0;
+    }
+
+    .active {
+        background: #ffcb04 !important;
+        color: black !important;
+    }
+    .image {
+        position: absolute;
+    }
+    body {
+      margin: 0; /* Remove default body margin */
+      padding: 0; /* Remove default body padding */
+      background-image: url('1.png'); /* Background image */
+      background-size: contain; /* Ensure the full image fits within the body */
+      background-repeat: no-repeat; /* Prevent tiling */
+      width: 1192px; /* Body width matches the viewport width */
+      height: 1686px; /* Body height matches the viewport height */
+    }
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -7px;
+        left: -7px;
+    }
+    body {
+  overflow: hidden; /* Prevent overflow */
+}
+
+</style>
+
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ids = ['listening_a1', 'listening_a2_1', 'listening_a2_2', 'reading_a1', 'reading_a2_1', 'reading_a2_2', 'reading_b1_1', 'speaking_a1', 'speaking_a2_1', 'speaking_a2_2', 'speaking_b1_1', 'speaking_b1_2', 'writing_a1', 'writing_a2_1', 'writing_a2_2', 'writing_b1_1', 'writing_b1_2', 'writing_b2_1', 'overall_a1', 'overall_a2_1', '']
+        ids.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.classList.add('active');
+            }
+        });
+    })
+
+</script>
+
+<body>
+    <div class="wrapper">
+        <div class="aday info">KAYRA UZ</div>
+        <div class="securecode info">HGJH234</div>
+        <div class="testcenter info">random test</div>
+        <div class="exam info">testExam</div>
+        <div class="administration info">asdasdasd</div>
+        <div class="date info">23 asd 3034</div>
+        <div class="school info">radno</div>
+        <div class="general level">A2.1</div>
+        <div class="estimate text">estimateee</div>
+        <div class="descriptors text">dasdasdasdasd</div>
+        <div class="listening level">A2.2</div>
+        <div class="reading level">B1.1</div>
+        <div class="speaking level">B1.2</div>
+        <div class="writing level">B2.1</div>
+        <div class="overall_bar" id="overall_bar">
+            <div class="progress a1" id="overall_a1"><span>A1</span></div>
+            <div class="progress a2_1" id="overall_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2" id="overall_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1" id="overall_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2" id="overall_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1" id="overall_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2" id="overall_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1" id="overall_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2" id="overall_c1_2"><span>C1.2</span></div>
+            <div class="progress c2" id="overall_c1"><span>C2</span></div>
+        </div>
+        <div class="listening_bar" id="listening_bar">
+            <div class="progress a1" id="listening_a1"><span>A1</span></div>
+            <div class="progress a2_1" id="listening_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2" id="listening_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1" id="listening_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2" id="listening_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1" id="listening_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2" id="listening_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1" id="listening_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2" id="listening_c1_2"><span>C1.2</span></div>
+            <div class="progress c2" id="listening_c2"><span>C2</span></div>
+        </div>
+        <div class="reading_bar" id="reading_bar">
+            <div class="progress a1 " id="reading_a1"><span>A1</span></div>
+            <div class="progress a2_1 " id="reading_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2 " id="reading_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1 " id="reading_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2 " id="reading_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1 " id="reading_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2 " id="reading_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1 " id="reading_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2 " id="reading_c1_2"><span>C1.2</span></div>
+            <div class="progress c2 " id="reading_c2"><span>C2</span></div>
+        </div>
+        <div class="speaking_bar" id="speaking_bar">
+            <div class="progress a1 " id="speaking_a1"><span>A1</span></div>
+            <div class="progress a2_1 " id="speaking_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2 " id="speaking_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1 " id="speaking_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2 " id="speaking_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1 " id="speaking_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2 " id="speaking_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1 " id="speaking_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2 " id="speaking_c1_2"><span>C1.2</span></div>
+            <div class="progress c2 " id="speaking_c2"><span>C2</span></div>
+        </div>
+        <div class="writing_bar" id="writing_bar">
+            <div class="progress a1 " id="writing_a1"><span>A1</span></div>
+            <div class="progress a2_1 " id="writing_a2_1"><span>A2.1</span></div>
+            <div class="progress a2_2 " id="writing_a2_2"><span>A2.2</span></div>
+            <div class="progress b1_1 " id="writing_b1_1"><span>B1.1</span></div>
+            <div class="progress b1_2 " id="writing_b1_2"><span>B1.2</span></div>
+            <div class="progress b2_1 " id="writing_b2_1"><span>B2.1</span></div>
+            <div class="progress b2_2 " id="writing_b2_2"><span>B2.2</span></div>
+            <div class="progress c1_1 " id="writing_c1_1"><span>C1.1</span></div>
+            <div class="progress c1_2 " id="writing_c1_2"><span>C1.2</span></div>
+            <div class="progress c2 " id="writing_c2"><span>C2</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
